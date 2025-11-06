@@ -277,6 +277,30 @@ button img{
     margin: 0;
 }
 
+.container__pricing{
+    width: 100%;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.title__pricing{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.text__pricing{
+    font-size: 2rem;
+    margin: 0 0 6rem;
+    padding: 2rem;
+    color: rgba(7, 5, 5, 0.493);
+}
+
+.container__cards__pricing{
+    
+}
 
 
 
