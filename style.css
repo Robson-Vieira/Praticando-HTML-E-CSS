@@ -4,7 +4,7 @@
   
 
   
-  --degrade-diagonal: linear-gradient(to top left, hsl(190, 95%, 42%), rgb(4, 109, 163));
+  --degrade-diagonal: linear-gradient(to top left, #06B2D2, #046DA3);
 }
 
 html,body{
@@ -15,19 +15,24 @@ html,body{
 }
 
 body{
-   
+    background:linear-gradient(to bottom, #F7FAFC, #E6F6FF );
     width: 100vw;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
+    min-height:100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width:80vw;
 }
 
 .delimited{
     max-width: 150rem;
     min-width: 100rem;
     margin:0 auto;
-    
-    height: 100vh;
+    background:none;
+    height: auto;
     
 }
 
@@ -141,8 +146,11 @@ li:hover{
 }
 
 
-span{
-    text-transform: uppercase;
+.title__with__style{
+    text-transform: capitalize;
+    background:var(--degrade-diagonal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .texto-menor{
@@ -167,7 +175,7 @@ button{
     font-size: 2rem;
     color: rgb(255, 255, 255);
     text-transform: capitalize;
-    background-color: aqua;
+    background:var(--degrade-diagonal);
     border: none;
     display: flex;
     flex-direction: row; 
@@ -188,7 +196,7 @@ button:hover{
     font-size: 2rem;
     color: black;
     text-transform: capitalize;
-    background-color: white;
+    background: white;
     border: 1px solid rgba(0, 0, 0, 0.126);
     transition: all 0.3s ease;
     
@@ -196,7 +204,7 @@ button:hover{
 
 .button_selected:hover{
     border: 1px solid transparent;
-    background-color: aqua;
+    background: #07B2D2;
     padding:1rem 4rem;
 }
 
@@ -230,7 +238,6 @@ button img{
     height: 40vh;
     width: 98%;
     margin: auto;
-    background-color: bisque;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -247,19 +254,27 @@ button img{
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    background-color: aquamarine;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     margin: 2rem 0  0 0;
     padding: 0 0 0 3rem;
     border-radius: 10px;
+    background:#fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .image-card{
     height: 4rem;
     width: 4rem;
-    background-color: aqua;
+    background:var(--degrade-diagonal);
     margin: 0.5rem 0 0 0;
     padding: 0.7rem;
+    border-radius:15px;
 
 }
 
@@ -289,6 +304,7 @@ button img{
     font-weight: 600;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .text__pricing{
@@ -296,13 +312,52 @@ button img{
     margin: 0 0 6rem;
     padding: 2rem;
     color: rgba(7, 5, 5, 0.493);
+    text-align: center;
 }
 
 .container__cards__pricing{
-    
+    display:flex;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
+    width:100%;
+    background-color:black;
+    gap: 3rem;
 }
 
 
+.card__pricing{
+    
+    width:25rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius:14px;
+    padding:2rem 2rem 14rem 2rem;
+    display:flex;
+    padding-left:3rem;
+    flex-direction:column;
+    align-items:flex-start;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    gap:1rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card__pricing:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.title__card__pricing{
+    margin: 2rem 0 0 0 ;
+    padding:0;
+    font-size:2.5rem;
+
+}
+
+.content__card__pricing{
+    margin:0;
+    padding:0;
+    font-size:1.4rem;
+}
 
 
 
