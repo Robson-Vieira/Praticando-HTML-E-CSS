@@ -76,14 +76,15 @@ nav{
     list-style-type: non
 }
 
-nav ul{
+.navegacao{
     display: flex;
     flex-direction: row;
     list-style-type: none;
     gap: 1em;
 }
 
-nav ul li{
+.navegacao__item{
+
     font-size: 1.6rem;
     text-decoration: none;
     text-transform: capitalize;
@@ -93,8 +94,7 @@ nav ul li{
     transition: all 0.2s ease;
 }
 
-
-li:hover{
+.navegacao__item:hover{
     background: var(--degrade-diagonal);
     color: white;
 }
@@ -320,17 +320,16 @@ button img{
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     justify-content: center;
     width:100%;
-    background-color:black;
     gap: 3rem;
 }
 
 
 .card__pricing{
     
-    width:25rem;
+    width:29rem;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius:14px;
-    padding:2rem 2rem 14rem 2rem;
+    padding:2rem 2rem 10rem 2rem;
     display:flex;
     padding-left:3rem;
     flex-direction:column;
@@ -353,12 +352,19 @@ button img{
 
 }
 
-.content__card__pricing{
-    margin:0;
-    padding:0;
-    font-size:1.4rem;
+.list__card{
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    gap: 8px;
+
 }
 
+.item__card{
+    font-size: 1.4rem;
+    text-align: start;
+
+}
 
 
 
